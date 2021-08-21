@@ -27,7 +27,7 @@ app.get('/api/notes', (req, res) => {
 });
 
 // Post new notes
-app.post('api/notes', (req, res) => {
+app.post('/api/notes', (req, res) => {
     fs.readFile('db/db.json', "utf8", (err, data) => {
         if (err){
             return console.error(err);
@@ -46,7 +46,7 @@ app.post('api/notes', (req, res) => {
 });
 
 // Delete notes
-app.delete('api/notes/:id', (req, res) => {
+app.delete('/api/notes/:id', (req, res) => {
     fs.readFile('db/db.json', "utf8", (err, data) => {
         if (err) {
             return console.error(err);
